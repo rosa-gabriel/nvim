@@ -1,13 +1,12 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+lsp.preset("recommended") -- Chooses the default settings for LSP
 
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
-})
+}) -- The LSP libraries that are automatically installed 
 
--- Fix Undefined global 'vim'
 lsp.configure('lua-language-server', {
     settings = {
         Lua = {
@@ -16,16 +15,15 @@ lsp.configure('lua-language-server', {
             }
         }
     }
-})
-
+}) -- Fix Undefined global 'vim'
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-  ["<C-Space>"] = cmp.mapping.complete(),
+  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select), -- Goes to next option on LSP
+  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select), -- Goes to next option on LSP
+  ['<C-y>'] = cmp.mapping.confirm({ select = true }), -- Goes to confirms option in LSP
+  ["<C-Space>"] = cmp.mapping.complete(), -- Calls LSP
 })
 
 cmp_mappings['<Tab>'] = nil
@@ -33,7 +31,7 @@ cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
-})
+}) -- Saves the cmp options 
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
@@ -43,11 +41,10 @@ lsp.set_preferences({
         hint = 'H',
         info = 'I'
     }
-})
+}) -- The letters that appear in the side of the line when there is a information to be displayed
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
-
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
@@ -65,4 +62,3 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
-

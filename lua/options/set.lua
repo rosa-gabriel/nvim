@@ -2,10 +2,6 @@
 local opt = vim.opt
 local g = vim.g
 
--- Desativa netrw
-g.loaded_netrw = 1
-g.loaded_netrwPlugin = 1
-
 -- Configuracao dos numeros laterais
 opt.number = true -- Mostra os numeros laterais
 opt.relativenumber = true -- Mostra os numeros relativos a linha atual
@@ -26,7 +22,6 @@ opt.scrolloff = 8
 opt.isfname:append("@-@")
 
 opt.updatetime = 50
-opt.colorcolumn = "150"
 
 -- Cursor
 opt.cursorline = true -- Faz um highlight da linha atual

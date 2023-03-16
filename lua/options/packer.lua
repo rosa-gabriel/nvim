@@ -1,59 +1,48 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+	use 'wbthomason/packer.nvim' -- Base packer
 
+	-- UI
+	use('feline-nvim/feline.nvim') -- Bottom status bar
+	use { "ellisonleao/gruvbox.nvim" } -- Theme
+	-- Navigation
+	use("ThePrimeagen/harpoon"); -- File navigation with marks
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+	} -- Quick open
 
-	use { "ellisonleao/gruvbox.nvim" }
-	require("gruvbox").setup({
-		undercurl = true,
-		underline = true,
-		bold = true,
-		italic = true,
-		strikethrough = true,
-		invert_selection = false,
-		invert_signs = false,
-		invert_tabline = false,
-		invert_intend_guides = false,
-		inverse = true, 	  
-		contrast = "",
-		palette_overrides = {},
-		overrides = {},
-		dim_inactive = false,
-		transparent_mode = false,
-	})
-	vim.cmd("colorscheme gruvbox")
+	-- Source controll
+	use("mbbill/undotree"); -- Shows all modifications
+	use("tpope/vim-fugitive"); -- Git support
 
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'});
-	use('nvim-treesitter/playground')
-	use("ThePrimeagen/harpoon");
-	use("mbbill/undotree");
-	use("tpope/vim-fugitive");
-
+	-- Base features
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}); -- Theme support etc - nvim-treesitter
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
 		requires = {
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{'williamboman/mason.nvim'},           -- Optional
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+			{'neovim/nvim-lspconfig'},
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},         -- Required
-			{'hrsh7th/cmp-nvim-lsp'},     -- Required
-			{'hrsh7th/cmp-buffer'},       -- Optional
-			{'hrsh7th/cmp-path'},         -- Optional
-			{'saadparwaiz1/cmp_luasnip'}, -- Optional
-			{'hrsh7th/cmp-nvim-lua'},     -- Optional
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'hrsh7th/cmp-buffer'}, 
+			{'hrsh7th/cmp-path'},
+			{'saadparwaiz1/cmp_luasnip'},
+			{'hrsh7th/cmp-nvim-lua'},
 
 			-- Snippets
-			{'L3MON4D3/LuaSnip'},             -- Required
-			{'rafamadriz/friendly-snippets'}, -- Optional
+			{'L3MON4D3/LuaSnip'},
+			{'rafamadriz/friendly-snippets'},
 		}
-	}
+	} -- Lsp support (Autocompletion)
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	} -- Autocompletion for pairs "()"
 end);
