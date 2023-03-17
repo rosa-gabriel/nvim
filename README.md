@@ -10,6 +10,9 @@ baixar gcc -> Codeblocks caso source forge bloqueado.
 
 baixar 'sharpkdp/fd' para pesquisa melhor.
 
+windows terminal
+
+powershell 7
 
 Colocar no profile do windows terminal:
 ```json
