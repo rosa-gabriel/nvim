@@ -6,16 +6,20 @@ return require('packer').startup(function(use)
 	-- UI
 	use('feline-nvim/feline.nvim') -- Bottom status bar
 	use { "ellisonleao/gruvbox.nvim" } -- Theme
+	use 'nvim-tree/nvim-web-devicons' -- icons
+
 	-- Navigation
 	use("ThePrimeagen/harpoon"); -- File navigation with marks
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	} -- Quick open
+	use {'BurntSushi/ripgrep'} -- used for search
 
 	-- Source controll
 	use("mbbill/undotree"); -- Shows all modifications
 	use("tpope/vim-fugitive"); -- Git support
+	use {'lewis6991/gitsigns.nvim'} -- Git Annotations
 
 	-- Base features
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}); -- Theme support etc - nvim-treesitter
@@ -45,4 +49,5 @@ return require('packer').startup(function(use)
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	} -- Autocompletion for pairs "()"
+	use {'windwp/nvim-ts-autotag'} -- autoclose html tags
 end);
