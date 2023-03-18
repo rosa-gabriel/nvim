@@ -1,20 +1,36 @@
-# neovim
+# NeoVim
 
-Baixar o packer:
-```
-git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-```
+---
+## Dependências
+
+### Packer
+O packer é o package manager do neovim.
+[Packer](https://github.com/wbthomason/packer.nvim)
+
+### ripgrep
+O ripgrep é uma versão melhorado do grep padrão.
 baixar o `ripgrep` para pesquisar em arquivos varios arquivos ao mesmo tempo
 
-baixar gcc -> Codeblocks caso source forge bloqueado.
+### Compilador de c
+O que esta como padrão é o `clang`, mas outros podem ser utilizados.
 
-baixar 'sharpkdp/fd' para pesquisa melhor.
+#### gcc
+Codeblocks caso source forge bloqueado.
 
-windows terminal
+#### clang 
+A melhor opção.
 
-powershell 7
+### fd
+O fd possui comando de find melhorados que são utilizados dentro de alguns plugins do nvim.
+'sharpkdp/fd'
 
-Colocar no profile do windows terminal:
+---
+## Extras
+
+### Windows terminal
+O melhor simulador de terminal do nvim para windows
+
+Remover o padding padrão e mudar a fonte do windows terminal.
 ```json
 "defaults": 
         {
@@ -26,3 +42,6 @@ Colocar no profile do windows terminal:
             "scrollbarState": "hidden"
 },
 ```
+
+### Powershell 7
+O melhor terminal para windows
