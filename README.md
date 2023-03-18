@@ -30,7 +30,7 @@ O fd possui comando de find melhorados que são utilizados dentro de alguns plug
 ### Windows terminal
 O melhor simulador de terminal do nvim para windows
 
-Remover o padding padrão e mudar a fonte do windows terminal.
+Remover o padding padrão, mudar fonte do windows terminal e tamanho da fonte para 11.
 ```json
 "defaults": 
         {
