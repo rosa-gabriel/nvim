@@ -23,6 +23,8 @@ return require('packer').startup(function(use)
 
 	-- Base features
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}); -- Theme support etc - nvim-treesitter
+
+	require 'nvim-treesitter.install'.compilers = { "gcc" }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
