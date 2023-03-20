@@ -14,9 +14,6 @@ baixar o `ripgrep` para pesquisar em arquivos varios arquivos ao mesmo tempo
 ### Compilador de c
 O que esta como padrão é o `clang`, mas outros podem ser utilizados.
 
-#### gcc
-Codeblocks caso source forge bloqueado.
-
 #### clang 
 A melhor opção.
 
