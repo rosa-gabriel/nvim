@@ -45,9 +45,12 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	} -- Lsp support (Autocompletion)
+	use 'mfussenegger/nvim-jdtls'
+
 	use {
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	} -- Autocompletion for pairs "()"
 	use {'windwp/nvim-ts-autotag'} -- autoclose html tags
+
 end);
