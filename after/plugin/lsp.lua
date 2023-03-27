@@ -5,7 +5,6 @@ lsp.preset("recommended") -- Chooses the default settings for LSP
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
-  'jdtls'
 }) -- The LSP libraries that are automatically installed 
 
 lsp.configure('lua-language-server', {
@@ -18,7 +17,6 @@ lsp.configure('lua-language-server', {
     }
 }) -- Fix Undefined global 'vim'
 
-require'lspconfig'.jdtls.setup{}
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
