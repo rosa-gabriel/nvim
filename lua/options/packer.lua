@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
 
 	-- UI
 	use('feline-nvim/feline.nvim') -- Bottom status bar
-	use { "ellisonleao/gruvbox.nvim" } -- Theme
+	use { "rebelot/kanagawa.nvim" } -- Theme
 	use 'nvim-tree/nvim-web-devicons' -- icons
 
 	-- Navigation
