@@ -23,5 +23,8 @@ require('kanagawa').setup({
         light = "lotus"
     },
 })
+
+vim.opt.termguicolors = true
+vim.opt.background = 'dark'
 -- setup must be called before loading
 vim.cmd("colorscheme kanagawa")
