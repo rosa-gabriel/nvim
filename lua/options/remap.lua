@@ -10,4 +10,4 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) --Open vim file explorer
 vim.keymap.set("x", "<leader>p", "\"_dP") -- Paste without yanking 
 
 vim.keymap.set("i", "<C-H>", "<C-w>") -- Windows bind 
---vim.keymap.set("i", "<C-BS>", "<C-w>") -- wsl <Cntrl-BackSpace> bind
+vim.keymap.set("i", "<C-BS>", "<C-w>") -- wsl <Cntrl-BackSpace> bind
