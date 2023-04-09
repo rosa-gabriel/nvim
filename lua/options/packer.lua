@@ -4,7 +4,6 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim' -- Base packer
 
 	-- UI
-	use('feline-nvim/feline.nvim') -- Bottom status bar
 	use { "rebelot/kanagawa.nvim" } -- Theme
 	use 'nvim-tree/nvim-web-devicons' -- icons
 

@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/home/gabri/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["feline.nvim"] = {
-    loaded = true,
-    path = "/home/gabri/.local/share/nvim/site/pack/packer/start/feline.nvim",
-    url = "https://github.com/feline-nvim/feline.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/gabri/.local/share/nvim/site/pack/packer/start/friendly-snippets",
