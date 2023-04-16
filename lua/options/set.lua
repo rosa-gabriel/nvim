@@ -3,46 +3,56 @@ local opt = vim.opt
 local g = vim.g
 
 -- Configuracao dos numeros laterais
-opt.number = true -- Mostra os numeros laterais
+opt.nu = true -- Mostra os numeros laterais
 opt.relativenumber = true -- Mostra os numeros relativos a linha atual
 
 -- Identacao e tab
 opt.tabstop = 4 -- 4 Espacos para o tab
 opt.softtabstop = 4 -- 4 Espacos para o tab
 opt.shiftwidth = 4 -- 4 Espacos para a identacao
-opt.autoindent = true -- Faz a identacao da proxima linha para ser igual a da linha atual
+--opt.autoindent = true -- Faz a identacao da proxima linha para ser igual a da linha atual
+
+opt.smartindent = true
 
 -- Quebra de linhas
 opt.wrap = false -- Desativa a quebra de linhas
 
+opt.swapfile = false
+opt.backup = false
+opt.undofile = true;
+
 -- Perquisa
 opt.hlsearch = false
 opt.incsearch = true
+
+opt.termguicolors = true
+
 opt.scrolloff = 8
+opt.signcolumn = "yes"
 opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
+opt.colorcolumn = "80"
+
 -- Cursor
 opt.cursorline = true -- Faz um highlight da linha atual
-
--- Aparencia
-opt.termguicolors = true
-opt.background = "dark" -- Escolhe a versao dark dos temas selecionados
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
-
--- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
-
--- Copiar
-opt.clipboard:append("unnamedplus") -- Usa as copias padroes do sistema
 
 -- Divitir a janela
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-") -- considera a-a como uma palavra
-
 -- Configs em .vim
-vim.cmd 'set noshowmode'
-vim.cmd 'set mouse='
+vim.cmd 'set mouse=' --Desativa o mouse
+
+--Destivados
+
+-- Copiar
+opt.clipboard:append("unnamedplus") -- Usa as copias padroes do sistema
+
+-- vim.cmd 'set noshowmode'
+
+-- backspace
+-- opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+
+-- opt.iskeyword:append("-") -- considera a-a como uma palavra
