@@ -4,8 +4,11 @@ if not use_java then
 	return
 end
 
-local jdtls_path = 'C:/Users/gabri/AppData/Local/nvim-data/mason/share/jdtls'
-local path_to_lsp_server = "C:/Users/gabri/AppData/Local/nvim-data/mason/packages/jdtls/config_win"
+local user = 'gabri'
+local workspace_dir = 'C:/src/java/'
+
+local jdtls_path = 'C:/Users/'..user..'/AppData/Local/nvim-data/mason/share/jdtls'
+local path_to_lsp_server = "C:/Users/"..user.."/AppData/Local/nvim-data/mason/packages/jdtls/config_win"
 local path_to_plugins = jdtls_path .. "/plugins/"
 local path_to_jar = path_to_plugins .. "org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar"
 local lombok_path = jdtls_path .. "/lombok.jar"
@@ -18,7 +21,6 @@ else root_dir = string.gsub(root_dir, '\\', '/')
 end
 
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = 'G:/src/java/' .. project_name
 
 local config = {
   cmd = {

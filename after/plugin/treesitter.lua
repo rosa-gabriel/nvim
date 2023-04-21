@@ -20,20 +20,3 @@ require'nvim-treesitter.configs'.setup {
    additional_vim_regex_highlighting = false,
   },
 }
-
--- All the default lenguages:
-
---  ensure_installed = { 
---	  "help", 
---	  "javascript", 
---	  "typescript", 
---	  "vim", 
---	  "java", 
---	  "lua", 
---	  "cpp", 
---	  "sql",
---	  "python",
---	  "markdown"
---  },
---
---
