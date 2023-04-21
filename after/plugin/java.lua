@@ -1,11 +1,11 @@
-local use_java = true 
+local use_java = false 
 
 if not use_java then
 	return
 end
 
 local user = 'gabri'
-local workspace_dir = 'C:/src/java/'
+local workspace_dir = 'G:/src/java/'
 
 local jdtls_path = 'C:/Users/'..user..'/AppData/Local/nvim-data/mason/share/jdtls'
 local path_to_lsp_server = "C:/Users/"..user.."/AppData/Local/nvim-data/mason/packages/jdtls/config_win"
