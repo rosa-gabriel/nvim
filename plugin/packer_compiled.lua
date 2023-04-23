@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/waif/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/home/waif/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/waif/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -148,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/waif/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/waif/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -204,6 +204,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/waif/.local/share/nvim/site/pack/packer/start/ripgrep",
     url = "https://github.com/BurntSushi/ripgrep"
+  },
+  ["rose-pine"] = {
+    loaded = true,
+    path = "/home/waif/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
