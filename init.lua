@@ -1,2 +1,2 @@
-require("options.remap")
 require("options.set")
+require("options.remap")

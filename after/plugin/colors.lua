@@ -1,5 +1,5 @@
 function ColorMyPencils(transparent, color)
-	color = color or "kanagawa";
+	color = color or "rose-pine";
 	vim.cmd.colorscheme(color);
 
 	if transparent then

@@ -1,12 +1,14 @@
 local lsp = require("lsp-zero")
 
-local system = "windows";
+local system = "linux";
 
 lsp.preset("recommended") -- Chooses the default settings for LSP
 
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
+  'lua_ls',
+  'jdtls'
 }) -- The LSP libraries that are automatically installed 
 
 lsp.configure('lua-language-server', {
@@ -19,6 +21,7 @@ lsp.configure('lua-language-server', {
     }
 }) -- Fix Undefined global 'vim'
 
+vim.keymap.set("n", "<leader>lr", ":w<CR>:LspRestart<CR>", {}); -- Lsp reload
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
