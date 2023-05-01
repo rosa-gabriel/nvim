@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim' -- Base packer
 
 	-- UI
-	use({ 'rose-pine/neovim', as = 'rose-pine' })
+	use 'Shatur/neovim-ayu'
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
@@ -61,6 +61,12 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	} -- Lsp support (Autocompletion)
+
+	-- Dap
+	use 'mfussenegger/nvim-dap'
+	use 'rcarriga/nvim-dap-ui'
+	use "theHamsta/nvim-dap-virtual-text"
+
 	use 'mfussenegger/nvim-jdtls'
 
 	use {

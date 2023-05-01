@@ -1,5 +1,10 @@
+require('ayu').setup({
+    mirage = false,
+    overrides = {},
+})
+
 function ColorMyPencils(transparent, color)
-	color = color or "rose-pine";
+	color = color or "ayu";
 	vim.cmd.colorscheme(color);
 
 	if transparent then
