@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim' -- Base packer
 
 	-- UI
-	use 'Shatur/neovim-ayu'
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
