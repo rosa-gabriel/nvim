@@ -17,3 +17,6 @@ vim.keymap.set({"n", "i"}, "<C-c>", "<esc>") -- Cntrl-p is useless
 
 vim.keymap.set("i", "<C-H>", "<C-w>") -- Windows bind 
 vim.keymap.set("i", "<C-BS>", "<C-w>") -- wsl <Cntrl-BackSpace> bind
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz") -- wsl <Cntrl-BackSpace> bind
+vim.keymap.set("n", "<C-u>", "<C-u>zz") -- wsl <Cntrl-BackSpace> bind

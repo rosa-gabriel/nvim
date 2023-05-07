@@ -3,26 +3,16 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim' -- Base packer
+	use "ThePrimeagen/vim-be-good";
 
 	-- UI
-	use({ 'rose-pine/neovim', as = 'rose-pine' })
-	use {
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		},
-	}
+	use "rebelot/kanagawa.nvim"
 	use 'nvim-tree/nvim-web-devicons' -- icons
 
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
-
-	-- Unless you are still migrating, remove the deprecated commands from v1.x
 
 	-- Navigation
 	use("ThePrimeagen/harpoon"); -- File navigation with marks
@@ -38,7 +28,10 @@ return require('packer').startup(function(use)
 	use {'lewis6991/gitsigns.nvim'} -- Git Annotations
 
 	-- Base features
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}); -- Theme support etc - nvim-treesitter
+	use(
+		'nvim-treesitter/nvim-treesitter',
+		{run = ':TSUpdate'}
+	); -- Theme support etc - nvim-treesitter
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
