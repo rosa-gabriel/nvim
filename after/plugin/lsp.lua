@@ -100,6 +100,12 @@ if system == "windows" then
 	) 
 else end
 
+lsp.configure('omnisharp', {
+  handlers = {
+    ["textDocument/definition"] = require('omnisharp_extended').handler,
+  }
+})
+
 lsp.setup()
 
 vim.diagnostic.config({
