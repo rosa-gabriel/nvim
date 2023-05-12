@@ -1,3 +1,5 @@
+vim.opt.guicursor = ""
+
 -- Objetos de opcoes de config do NeoVim
 local opt = vim.opt
 local g = vim.g
