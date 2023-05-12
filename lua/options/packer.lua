@@ -37,9 +37,10 @@ return require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		{run = ':TSUpdate'}
 	); -- Theme support etc - nvim-treesitter
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v1.x',
+		-- branch = 'v1.x', -- Used for neovim -v < 0.8
 		requires = {
 			-- LSP Support
 			{'neovim/nvim-lspconfig'},
@@ -60,14 +61,14 @@ return require('packer').startup(function(use)
 		}
 	} -- Lsp support (Autocompletion)
 
+	-- LSP Extenders
+	use 'mfussenegger/nvim-jdtls' -- Extender for Java
+	use "Hoffs/omnisharp-extended-lsp.nvim" -- Extender for C#
+
 	-- Dap
 	use 'mfussenegger/nvim-dap'
 	use 'rcarriga/nvim-dap-ui'
 	use "theHamsta/nvim-dap-virtual-text"
-
-	-- LSP Extenders
-	use 'mfussenegger/nvim-jdtls' -- Extender for Java
-	use "Hoffs/omnisharp-extended-lsp.nvim" -- Extender for C#
 
 	use {
 		"windwp/nvim-autopairs",

@@ -1,8 +1,8 @@
+-- Used to make the cursor a box
 vim.opt.guicursor = ""
 
 -- Objetos de opcoes de config do NeoVim
 local opt = vim.opt
-local g = vim.g
 
 -- Configuracao dos numeros laterais
 opt.nu = true -- Mostra os numeros laterais
@@ -12,6 +12,7 @@ opt.relativenumber = true -- Mostra os numeros relativos a linha atual
 opt.tabstop = 4 -- 4 Espacos para o tab
 opt.softtabstop = 4 -- 4 Espacos para o tab
 opt.shiftwidth = 4 -- 4 Espacos para a identacao
+opt.expandtab = true
 
 -- Indentation
 opt.smartindent = true
@@ -21,6 +22,7 @@ opt.wrap = false -- Desativa a quebra de linhas
 
 opt.swapfile = false
 opt.backup = false
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true;
 
 -- Perquisa
