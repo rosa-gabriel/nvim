@@ -48,6 +48,3 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- Configs em .vim
 vim.cmd 'set mouse=' --Desativa o mouse
-
--- Copiar
-opt.clipboard:append("unnamedplus") -- Usa as copias padroes do sistema

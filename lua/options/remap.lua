@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) --Open vim file explorer
 -- Makes copy to clipboard on <leader>y
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y");
 vim.keymap.set({"n", "v"}, "<leader>Y", "\"+Y");
+vim.keymap.set({"n", "v"}, "<leader>pc", "\"+p");
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Move up and down on edit mode
