@@ -1,5 +1,12 @@
+require("catppuccin").setup({
+    flavour = "macchiato",
+    transparent_background = true,
+    term_colors = true,
+    no_italic = true,
+})
+
 function ColorMyPencils(theme, transparent, color)
-	color = color or "kanagawa";
+	color = color or "catppuccin";
 	vim.o.background = theme;
 	vim.cmd.colorscheme(color);
 
@@ -9,4 +16,4 @@ function ColorMyPencils(theme, transparent, color)
 	end
 end
 
-ColorMyPencils("dark", false, "kanagawa");
+ColorMyPencils("dark", true, "catppuccin");
