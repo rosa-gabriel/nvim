@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\e-geduardo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["everforest-nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\e-geduardo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\everforest-nvim",
+    url = "https://github.com/neanias/everforest-nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\e-geduardo\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",

@@ -1,8 +1,8 @@
-require("catppuccin").setup({
-    flavour = "macchiato",
-    transparent_background = true,
-    term_colors = true,
-    no_italic = true,
+require("everforest").setup({
+  background = "medium",
+  transparent_background_level = 1,
+  italics = false,
+  disable_italic_comments = false,
 })
 
 function ColorMyPencils(theme, transparent, color)
@@ -16,4 +16,4 @@ function ColorMyPencils(theme, transparent, color)
 	end
 end
 
-ColorMyPencils("dark", true, "catppuccin");
+ColorMyPencils("dark", false, "everforest");

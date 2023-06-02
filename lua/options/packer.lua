@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
 	use "ThePrimeagen/vim-be-good";
 
 	-- UI
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use "neanias/everforest-nvim";
 	use 'nvim-tree/nvim-web-devicons' -- icons
 
 	use {
