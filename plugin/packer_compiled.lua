@@ -200,6 +200,11 @@ _G.packer_plugins = {
     path = "/home/waif/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["nyoom.nvim"] = {
+    loaded = true,
+    path = "/home/waif/.local/share/nvim/site/pack/packer/start/nyoom.nvim",
+    url = "https://github.com/nyoom-engineering/nyoom.nvim"
+  },
   ["omnisharp-extended-lsp.nvim"] = {
     loaded = true,
     path = "/home/waif/.local/share/nvim/site/pack/packer/start/omnisharp-extended-lsp.nvim",
