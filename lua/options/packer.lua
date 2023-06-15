@@ -17,8 +17,8 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+      "folke/todo-comments.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
     }
 
     use {
