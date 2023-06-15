@@ -9,6 +9,18 @@ return require('packer').startup(function(use)
     use "neanias/everforest-nvim";
 	use 'nvim-tree/nvim-web-devicons' -- icons
 
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+      },
+    }
+
+    use {
+      "startup-nvim/startup.nvim",
+      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    }
+
 	use {
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons",
