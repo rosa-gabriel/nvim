@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     -- Navigation
     use("ThePrimeagen/harpoon"); -- File navigation with marks
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     } -- Quick open
     use {'BurntSushi/ripgrep'} -- used for search
