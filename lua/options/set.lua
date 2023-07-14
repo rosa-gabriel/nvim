@@ -17,6 +17,8 @@ opt.expandtab = true
 -- Indentation
 opt.smartindent = true
 
+opt.ignorecase = true
+
 -- Quebra de linhas
 opt.wrap = false -- Desativa a quebra de linhas
 
