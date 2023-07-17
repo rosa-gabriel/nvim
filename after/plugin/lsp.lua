@@ -1,5 +1,15 @@
 local lsp = require("lsp-zero")
 
+-- TODO: null-ls will be archived - find a new option
+local null_ls = require("null-ls")
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.diagnostics.eslint,
+    },
+})
+
 local system = "windows";
 
 lsp.preset("recommended") -- Chooses the default settings for LSP
@@ -60,6 +70,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+    vim.keymap.set("n", "<leader>vf", function() vim.lsp.buf.format({ timeout_ms = 10000 }) end, opts)
 end)
 
 if system == "windows" then

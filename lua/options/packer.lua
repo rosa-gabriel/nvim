@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
     use "neanias/everforest-nvim";
     use 'nvim-tree/nvim-web-devicons' -- icons
 
+-- TODO: null-ls will be archived - find a new option
+    use 'jose-elias-alvarez/null-ls.nvim';
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
