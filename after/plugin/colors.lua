@@ -1,12 +1,10 @@
-require("everforest").setup({
-    background = "medium",
-    transparent_background_level = 0,
-    italics = false,
-    disable_italic_comments = false,
+require('rose-pine').setup({
+    variant = 'moon',
+    disable_italics = true,
 })
 
 function ColorMyPencils(theme, transparent, color)
-    color = color or "catppuccin";
+    color = color or "rose-pine";
     vim.o.background = theme;
     vim.cmd.colorscheme(color);
 
@@ -16,4 +14,4 @@ function ColorMyPencils(theme, transparent, color)
     end
 end
 
-ColorMyPencils("dark", false, "everforest");
+ColorMyPencils("dark", false, "rose-pine");

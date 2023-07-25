@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
     use "ThePrimeagen/vim-be-good";
 
     -- UI
-    use "neanias/everforest-nvim";
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'nvim-tree/nvim-web-devicons' -- icons
 
 -- TODO: null-ls will be archived - find a new option
