@@ -1,8 +1,6 @@
-require('rose-pine').setup({
-    variant = 'moon',
-    disable_italics = true,
-})
+require("gruvbox").setup()
 
+vim.cmd("colorscheme gruvbox")
 function ColorMyPencils(theme, transparent, color)
     color = color or "rose-pine";
     vim.o.background = theme;
@@ -14,4 +12,4 @@ function ColorMyPencils(theme, transparent, color)
     end
 end
 
-ColorMyPencils("dark", false, "rose-pine");
+ColorMyPencils("dark", false, "gruvbox");

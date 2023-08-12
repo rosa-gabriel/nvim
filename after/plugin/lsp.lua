@@ -12,6 +12,7 @@ null_ls.setup({
 })
 
 local system = "windows";
+local enable_dart = false;
 
 lsp.preset("recommended") -- Chooses the default settings for LSP
 
@@ -117,6 +118,25 @@ lsp.configure('omnisharp', {
         ["textDocument/definition"] = require('omnisharp_extended').handler,
     }
 })
+
+if enable_dart then
+    lsp.configure('dartls',{
+        on_attach = on_attach,
+        settings = {
+            dart = {
+                analysisExcludedFolders = {
+                    vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
+                    vim.fn.expand("$HOME/.pub-cache"),
+                    vim.fn.expand("/opt/homebrew/"),
+                    vim.fn.expand("$HOME/tools/flutter/"),
+                },
+                updateImportsOnRename = true,
+                completeFunctionCalls = true,
+                showTodos = true,
+            },
+        },
+    })
+end
 
 lsp.setup()
 
