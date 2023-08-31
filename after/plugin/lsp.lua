@@ -20,7 +20,8 @@ lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
     'lua_ls',
-    'jdtls'
+    'jdtls',
+    'jsonls'
 }) -- The LSP libraries that are automatically installed 
 
 lsp.configure('lua_ls', {
