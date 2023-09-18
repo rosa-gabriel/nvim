@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
     use { "ellisonleao/gruvbox.nvim" }
     use 'nvim-tree/nvim-web-devicons' -- icons
 
--- TODO: null-ls will be archived - find a new option
+    -- TODO: null-ls will be archived - find a new option
     use 'jose-elias-alvarez/null-ls.nvim';
 
     use {
@@ -49,8 +49,8 @@ return require('packer').startup(function(use)
 
     -- Base features
     use(
-    'nvim-treesitter/nvim-treesitter',
-    {run = ':TSUpdate'}
+        'nvim-treesitter/nvim-treesitter',
+        {run = ':TSUpdate'}
     ); -- Theme support etc - nvim-treesitter
 
     use {

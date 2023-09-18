@@ -62,7 +62,7 @@ lsp.set_preferences({
     }
 }) -- The letters that appear in the side of the line when there is a information to be displayed
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -111,7 +111,7 @@ if system == "windows" then
         },
         root_dir = java_root_finder,
     }
-    ) 
+    )
 else end
 
 lsp.configure('omnisharp', {
@@ -122,7 +122,6 @@ lsp.configure('omnisharp', {
 
 if enable_dart then
     lsp.configure('dartls',{
-        on_attach = on_attach,
         settings = {
             dart = {
                 analysisExcludedFolders = {
@@ -171,7 +170,7 @@ end
 local mason_registry = require("mason-registry")
 local js_path = (mason_registry.get_package("js-debug-adapter")):get_install_path();
 
-require("dap").adapters["pwa-node"] = {
+dap.adapters["pwa-node"] = {
     type = "server",
     host = "localhost",
     port = "${port}",
@@ -182,7 +181,7 @@ require("dap").adapters["pwa-node"] = {
 
 }
 
-require("dap").configurations.javascript = {
+dap.configurations.javascript = {
     {
         type = "pwa-node",
         request = "launch",
