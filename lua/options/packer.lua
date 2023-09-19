@@ -20,8 +20,8 @@ return require('packer').startup(function(use)
     }
 
     use {
-      "folke/todo-comments.nvim",
-      requires = { "nvim-lua/plenary.nvim" },
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
     }
 
     use {
@@ -38,19 +38,19 @@ return require('packer').startup(function(use)
     use("ThePrimeagen/harpoon"); -- File navigation with marks
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    } -- Quick open
-    use {'BurntSushi/ripgrep'} -- used for search
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }                            -- Quick open
+    use { 'BurntSushi/ripgrep' } -- used for search
 
     -- Source controll
-    use("mbbill/undotree"); -- Shows all modifications
-    use("tpope/vim-fugitive"); -- Git support
-    use {'lewis6991/gitsigns.nvim'} -- Git Annotations
+    use("mbbill/undotree");           -- Shows all modifications
+    use("tpope/vim-fugitive");        -- Git support
+    use { 'lewis6991/gitsigns.nvim' } -- Git Annotations
 
     -- Base features
     use(
         'nvim-treesitter/nvim-treesitter',
-        {run = ':TSUpdate'}
+        { run = ':TSUpdate' }
     ); -- Theme support etc - nvim-treesitter
 
     use {
@@ -58,26 +58,26 @@ return require('packer').startup(function(use)
         -- branch = 'v1.x', -- Used for neovim -v < 0.8
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'neovim/nvim-lspconfig' },
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lua'},
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'hrsh7th/cmp-nvim-lua' },
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+            { 'L3MON4D3/LuaSnip' },
+            { 'rafamadriz/friendly-snippets' },
         }
     } -- Lsp support (Autocompletion)
 
     -- LSP Extenders
-    use 'mfussenegger/nvim-jdtls' -- Extender for Java
+    use 'mfussenegger/nvim-jdtls'           -- Extender for Java
     use "Hoffs/omnisharp-extended-lsp.nvim" -- Extender for C#
 
     -- Dap
@@ -88,8 +88,13 @@ return require('packer').startup(function(use)
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
-    } -- Autocompletion for pairs "()"
-    use {'windwp/nvim-ts-autotag'} -- autoclose html tags
+    }                                -- Autocompletion for pairs "()"
 
+    use { 'windwp/nvim-ts-autotag' } -- autoclose html tags
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end);
-
