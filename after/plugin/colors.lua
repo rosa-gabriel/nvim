@@ -12,4 +12,4 @@ function ColorMyPencils(theme, transparent, color)
     end
 end
 
-ColorMyPencils("dark", false, "gruvbox");
+ColorMyPencils("dark", false, "kanagawa");

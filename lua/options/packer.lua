@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
 
     -- UI
     use { "ellisonleao/gruvbox.nvim" }
+    use "rebelot/kanagawa.nvim"
     use 'nvim-tree/nvim-web-devicons' -- icons
 
     -- TODO: null-ls will be archived - find a new option
