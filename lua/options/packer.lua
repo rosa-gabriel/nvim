@@ -6,7 +6,6 @@ return require('packer').startup(function(use)
     use "ThePrimeagen/vim-be-good";
 
     -- UI
-    use { "ellisonleao/gruvbox.nvim" }
     use "rebelot/kanagawa.nvim"
     use 'nvim-tree/nvim-web-devicons' -- icons
 
@@ -105,9 +104,9 @@ return require('packer').startup(function(use)
         config = function()
             require('neorg').setup {
                 load = {
-                    ["core.defaults"] = {}, -- Loads default behaviour
-                    ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                    ["core.dirman"] = {  -- Manages Neorg workspaces
+                    ["core.defaults"] = {}, -- Defaults
+                    ["core.concealer"] = {}, -- Icons
+                    ["core.dirman"] = {  -- Workspace management
                         config = {
                             workspaces = {
                                 notes = "~/notes",
@@ -115,6 +114,7 @@ return require('packer').startup(function(use)
                         },
                     },
                 },
+                ["core.journal"] = {}, -- Icons
             }
         end,
         run = ":Neorg sync-parsers",

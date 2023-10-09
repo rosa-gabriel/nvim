@@ -1,6 +1,3 @@
-require("gruvbox").setup()
-
-vim.cmd("colorscheme gruvbox")
 function ColorMyPencils(theme, transparent, color)
     color = color or "rose-pine";
     vim.o.background = theme;
