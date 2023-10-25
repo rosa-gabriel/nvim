@@ -11,7 +11,7 @@ null_ls.setup({
     },
 })
 
-local system = "linux";
+local system = "windows";
 local enable_dart = false;
 
 lsp.preset("recommended") -- Chooses the default settings for LSP
