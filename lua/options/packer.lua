@@ -6,7 +6,8 @@ return require('packer').startup(function(use)
     use "ThePrimeagen/vim-be-good";
 
     -- UI
-    use "rebelot/kanagawa.nvim"
+    use "stevearc/oil.nvim"
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'nvim-tree/nvim-web-devicons' -- icons
 
     -- TODO: null-ls will be archived - find a new option
@@ -104,9 +105,9 @@ return require('packer').startup(function(use)
         config = function()
             require('neorg').setup {
                 load = {
-                    ["core.defaults"] = {}, -- Defaults
+                    ["core.defaults"] = {},  -- Defaults
                     ["core.concealer"] = {}, -- Icons
-                    ["core.dirman"] = {  -- Workspace management
+                    ["core.dirman"] = {      -- Workspace management
                         config = {
                             workspaces = {
                                 notes = "~/notes",
