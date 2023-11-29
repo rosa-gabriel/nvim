@@ -10,8 +10,7 @@ return require('packer').startup(function(use)
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use 'nvim-tree/nvim-web-devicons' -- icons
 
-    -- TODO: null-ls will be archived - find a new option
-    use 'jose-elias-alvarez/null-ls.nvim';
+    use 'nvimtools/none-ls.nvim';
 
     use {
         'nvim-tree/nvim-tree.lua',
@@ -37,9 +36,12 @@ return require('packer').startup(function(use)
 
     -- Navigation
     use("ThePrimeagen/harpoon"); -- File navigation with marks
+
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = {
+            { 'nvim-lua/plenary.nvim' }
+        },
     }                            -- Quick open
     use { 'BurntSushi/ripgrep' } -- used for search
 
