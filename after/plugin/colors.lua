@@ -1,5 +1,5 @@
 function ColorMyPencils(theme, transparent, color)
-    color = color or "rose-pine";
+    color = color or "kanagawa";
     vim.o.background = theme;
     vim.cmd.colorscheme(color);
 
@@ -9,4 +9,4 @@ function ColorMyPencils(theme, transparent, color)
     end
 end
 
-ColorMyPencils("dark", false, "rose-pine");
+ColorMyPencils("dark", false, "kanagawa");
