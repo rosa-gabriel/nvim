@@ -4,7 +4,8 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Base packer
     use "ThePrimeagen/vim-be-good";
-    use "rebelot/kanagawa.nvim"
+    use "rebelot/kanagawa.nvim";
+    use { 'rose-pine/neovim', as = 'rose-pine' };
 
     use {
         "m4xshen/hardtime.nvim",
