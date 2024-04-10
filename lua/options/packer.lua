@@ -105,27 +105,4 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-
-    -- Neorg
-    use {
-        "nvim-neorg/neorg",
-        config = function()
-            require('neorg').setup {
-                load = {
-                    ["core.defaults"] = {},  -- Defaults
-                    ["core.concealer"] = {}, -- Icons
-                    ["core.dirman"] = {      -- Workspace management
-                        config = {
-                            workspaces = {
-                                notes = "~/notes",
-                            },
-                        },
-                    },
-                },
-                ["core.journal"] = {}, -- Icons
-            }
-        end,
-        run = ":Neorg sync-parsers",
-        requires = "nvim-lua/plenary.nvim",
-    }
 end);
