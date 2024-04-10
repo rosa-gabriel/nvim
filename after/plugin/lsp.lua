@@ -11,7 +11,7 @@ null_ls.setup({
     },
 })
 
-local system = "windows";
+local system = "linux";
 local enable_dart = false;
 
 lsp.preset("recommended") -- Chooses the default settings for LSP
@@ -152,47 +152,47 @@ vim.diagnostic.config({
 
 -- Dap
 
-vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
-vim.keymap.set("n", "<F3>", ":lua require'dap'.step_over()<CR>")
-vim.keymap.set("n", "<F2>", ":lua require'dap'.step_into()<CR>")
-vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
-vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
-vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition:'))<CR>")
-
-require("nvim-dap-virtual-text").setup();
-require("dapui").setup();
-
-local dap, dapui = require('dap'), require('dapui')
-dap.listeners.after.event_initialized["dapui_config"] = function()
-    dapui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-    dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-    dapui.close()
-end
-
-local mason_registry = require("mason-registry")
-local js_path = (mason_registry.get_package("js-debug-adapter")):get_install_path();
-
-dap.adapters["pwa-node"] = {
-    type = "server",
-    host = "localhost",
-    port = "${port}",
-    executable = {
-        command = "node",
-        args = { js_path .. "/js-debug/src/dapDebugServer.js", "${port}" },
-    }
-
-}
-
-dap.configurations.javascript = {
-    {
-        type = "pwa-node",
-        request = "launch",
-        name = "Launch file",
-        program = "${file}",
-        cwd = "${workspaceFolder}",
-    },
-}
+-- vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+-- vim.keymap.set("n", "<F3>", ":lua require'dap'.step_over()<CR>")
+-- vim.keymap.set("n", "<F2>", ":lua require'dap'.step_into()<CR>")
+-- vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
+-- vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+-- vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition:'))<CR>")
+-- 
+-- require("nvim-dap-virtual-text").setup();
+-- require("dapui").setup();
+-- 
+-- local dap, dapui = require('dap'), require('dapui')
+-- dap.listeners.after.event_initialized["dapui_config"] = function()
+--     dapui.open()
+-- end
+-- dap.listeners.before.event_terminated["dapui_config"] = function()
+--     dapui.close()
+-- end
+-- dap.listeners.before.event_exited["dapui_config"] = function()
+--     dapui.close()
+-- end
+-- 
+-- local mason_registry = require("mason-registry")
+-- local js_path = (mason_registry.get_package("js-debug-adapter")):get_install_path();
+-- 
+-- dap.adapters["pwa-node"] = {
+--     type = "server",
+--     host = "localhost",
+--     port = "${port}",
+--     executable = {
+--         command = "node",
+--         args = { js_path .. "/js-debug/src/dapDebugServer.js", "${port}" },
+--     }
+-- 
+-- }
+-- 
+-- dap.configurations.javascript = {
+--     {
+--         type = "pwa-node",
+--         request = "launch",
+--         name = "Launch file",
+--         program = "${file}",
+--         cwd = "${workspaceFolder}",
+--     },
+-- }

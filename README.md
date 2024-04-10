@@ -3,10 +3,6 @@
 ---
 ## Dependências
 
-### Packer
-O packer é o package manager do neovim.
-[Packer](https://github.com/wbthomason/packer.nvim)
-
 ### ripgrep
 O ripgrep é uma versão melhorado do grep padrão.
 baixar o `ripgrep` para pesquisar em arquivos varios arquivos ao mesmo tempo

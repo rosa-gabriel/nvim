@@ -1,5 +1,3 @@
-vim.g.mapleader = " "; -- Set the <leader> in the remaps
-
 -- Makes copy to clipboard on <leader>y
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y");
 vim.keymap.set({"n", "v"}, "<leader>Y", "\"+Y");
