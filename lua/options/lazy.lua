@@ -12,11 +12,35 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "; -- Set the <leader> in the remaps
+vim.g.maplocalleader = ",";
 
 require('lazy').setup({
     "ThePrimeagen/vim-be-good",
 
     { 'rose-pine/neovim',       as = 'rose-pine' },
+
+    {
+        "nvim-neorg/neorg",
+        lazy = false,
+        version = "*",
+        config = (function()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {},
+                    ["core.concealer"] = {},
+                    ["core.dirman"] = {
+                        config = {
+                            workspaces = {
+                                notes = "~/neorg/notes",
+                                weg = "~/neorg/weg",
+                            },
+                            default_workspace = "notes",
+                        },
+                    },
+                },
+            }
+        end)
+    },
 
     -- UI
     "stevearc/oil.nvim",
