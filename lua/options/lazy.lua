@@ -16,7 +16,21 @@ vim.g.mapleader = " "; -- Set the <leader> in the remaps
 require('lazy').setup({
     "ThePrimeagen/vim-be-good",
 
-    { 'rose-pine/neovim',       as = 'rose-pine' },
+    {
+        'sainnhe/everforest',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.g.everforest_enable_italic = true
+            vim.g.background = "hard"
+        end
+    },
+    -- lazy.nvim
+    {
+        "m4xshen/hardtime.nvim",
+        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        opts = {}
+    },
 
     -- UI
     "stevearc/oil.nvim",
