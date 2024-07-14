@@ -1,30 +1,11 @@
 local lsp = require("lsp-zero")
 
--- TODO: null-ls will be archived - find a new option
--- On null-ls you can import parts of the service / like in eslint you can import just the diagnostics or/and the code actions
-local null_ls = require("null-ls")
-
-null_ls.setup({
-    sources = {
-        require('none-ls.formatting.eslint_d'),
-        require('none-ls.diagnostics.eslint_d'),
-    },
-})
-
 local system = "linux";
-local enable_dart = false;
 
 lsp.preset("recommended")
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {
-        -- 'tsserver',
-        'rust_analyzer',
-        'lua_ls',
-        'jdtls',
-        -- 'jsonls'
-    },
     handlers = {
         lsp.default_setup,
     },
@@ -124,26 +105,4 @@ lsp.configure('omnisharp', {
     }
 })
 
-if enable_dart then
-    lsp.configure('dartls', {
-        settings = {
-            dart = {
-                analysisExcludedFolders = {
-                    vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
-                    vim.fn.expand("$HOME/.pub-cache"),
-                    vim.fn.expand("/opt/homebrew/"),
-                    vim.fn.expand("$HOME/tools/flutter/"),
-                },
-                updateImportsOnRename = true,
-                completeFunctionCalls = true,
-                showTodos = true,
-            },
-        },
-    })
-end
-
 lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true
-})

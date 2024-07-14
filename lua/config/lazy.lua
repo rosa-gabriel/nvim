@@ -45,6 +45,9 @@ vim.opt.splitbelow = true -- split horizontal window to the bottom
 vim.cmd 'set mouse='      -- Disable mouse
 vim.g.mapleader = " ";    -- Set the <leader> in the remaps
 vim.g.maplocalleader = ",";
+vim.diagnostic.config({
+    virtual_text = true
+})
 
 local config = {
     spec = {
