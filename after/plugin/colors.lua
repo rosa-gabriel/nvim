@@ -9,4 +9,4 @@ function ColorMyPencils(theme, transparent, color)
     end
 end
 
-ColorMyPencils("dark", false, "everforest");
+ColorMyPencils("dark", false, "kanagawa");

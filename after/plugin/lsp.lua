@@ -19,11 +19,11 @@ lsp.preset("recommended")
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        'tsserver',
+        -- 'tsserver',
         'rust_analyzer',
         'lua_ls',
         'jdtls',
-        'jsonls'
+        -- 'jsonls'
     },
     handlers = {
         lsp.default_setup,
@@ -76,7 +76,7 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("n", "<leader>vf", function() vim.lsp.buf.format({ timeout_ms = 10000 }) end, opts)
+    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 end)
 
 if system == "windows" then

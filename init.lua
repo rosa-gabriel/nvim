@@ -1,5 +1,4 @@
-require("options.lazy")
-require("options.set")
-require("options.remap")
+require("config.lazy")
+require("config.remap")
 
 require('hardtime').setup();
