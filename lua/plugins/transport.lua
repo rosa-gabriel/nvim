@@ -1,6 +1,7 @@
 return {
     {
         "stevearc/oil.nvim",
+        lazy = false,
         opts = {
             keymaps = {
                 ["g?"] = "actions.show_help",
@@ -29,6 +30,7 @@ return {
     },
     {
         "ThePrimeagen/harpoon",
+        lazy = false,
         config = (function()
             local mark = require("harpoon.mark")
             local ui = require("harpoon.ui")
@@ -44,6 +46,7 @@ return {
     },                                                                  -- File navigation with marks
     {
         'nvim-telescope/telescope.nvim',
+        lazy = false,
         dependencies = {
             { 'nvim-lua/plenary.nvim' }
         },
