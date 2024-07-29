@@ -13,6 +13,5 @@ return {
         end)
     },
     'nvimtools/none-ls-extras.nvim',
-    'mfussenegger/nvim-jdtls',           -- Java
     "Hoffs/omnisharp-extended-lsp.nvim", -- C#
 }
