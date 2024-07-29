@@ -13,5 +13,5 @@ return {
         end)
     },
     'nvimtools/none-ls-extras.nvim',
-    "Hoffs/omnisharp-extended-lsp.nvim", -- C#
+    { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true }, -- C#
 }
