@@ -1,4 +1,5 @@
-require("config.lazy")
-require("config.remap")
+require("set")
+require("init")
+require("remap")
 
-require('hardtime').setup();
+-- require('hardtime').setup();
