@@ -10,16 +10,8 @@ function ColorMyPencils(theme, transparent, color)
 end
 
 return {
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        lazy = false,
-        config = true,
-    },
-    {
-        "rebelot/kanagawa.nvim",
-        config = function ()
-            ColorMyPencils("dark", false, "kanagawa");
-        end,
-    }
+    "rebelot/kanagawa.nvim",
+    config = function()
+        ColorMyPencils("dark", false, "kanagawa");
+    end,
 }

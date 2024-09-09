@@ -10,8 +10,7 @@ return {
                     require('none-ls.diagnostics.eslint_d'),
                 },
             })
-        end)
+        end),
     },
     'nvimtools/none-ls-extras.nvim',
-    { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true }, -- C#
 }

@@ -1,4 +1,6 @@
 return {
+    { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true },
+    { 'lewis6991/gitsigns.nvim' },
     {
         'nvim-tree/nvim-web-devicons',
         lazy = false,
