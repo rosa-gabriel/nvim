@@ -7,12 +7,12 @@ return {
             load = {
                 ["core.defaults"] = {},
                 ["core.concealer"] = {},
-                ["core.ui.calendar"] = {},
                 ["core.dirman"] = {
                     config = {
                         workspaces = {
                             notes = "~/neorg/notes",
                             weg = "~/neorg/weg",
+                            college = "~/neorg/college",
                         },
                         default_workspace = "notes",
                     },
