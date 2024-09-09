@@ -52,7 +52,6 @@ vim.diagnostic.config({
 local config = {
     spec = {
         { import = "plugins" },
-        "rebelot/kanagawa.nvim",
     },
 }
 
