@@ -2,8 +2,11 @@ return {
     "nvim-neorg/neorg",
     lazy = false,
     version = "*",
+    dependencies = { { "nvim-lua/plenary.nvim" }, { "nvim-neorg/neorg-telescope" } },
     config = (function()
-        require('neorg').setup {
+        local neorg = require('neorg')
+
+        neorg.setup {
             load = {
                 ["core.defaults"] = {},
                 ["core.concealer"] = {},
@@ -17,9 +20,14 @@ return {
                         default_workspace = "notes",
                     },
                 },
+                ["core.integrations.telescope"] = {},
             },
         }
 
+        vim.keymap.set("n", "<localleader>p", "<Plug>(neorg.telescope.find_norg_files)")
+        vim.keymap.set("n", "<localleader>w", "<Plug>(neorg.telescope.switch_workspace)")
+        vim.keymap.set("n", "<localleader>h", "<Plug>(neorg.telescope.search_headings)")
+        vim.keymap.set("n", "<localleader>l", "<Plug>(neorg.telescope.insert_file_link)")
         vim.wo.foldlevel = 99
         vim.wo.conceallevel = 2
     end)
