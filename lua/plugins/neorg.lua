@@ -21,6 +21,7 @@ return {
                     },
                 },
                 ["core.integrations.telescope"] = {},
+                ["core.export"] = {},
             },
         }
 
