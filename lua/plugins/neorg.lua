@@ -13,9 +13,9 @@ return {
                 ["core.dirman"] = {
                     config = {
                         workspaces = {
-                            notes = "~/neorg/notes",
-                            weg = "~/neorg/weg",
-                            college = "~/neorg/college",
+                            notes = "~/notes/notes",
+                            weg = "~/notes/weg",
+                            college = "~/notes/college",
                         },
                         default_workspace = "notes",
                     },
