@@ -6,7 +6,6 @@ return {
         require 'nvim-treesitter.configs'.setup {
             sync_install = false,
             auto_install = true,
-            ensure_installed = 'all',
             ignore_install = { 'org' },
             highlight = {
                 enable = true,
