@@ -8,6 +8,10 @@ return {
 				go = { "gofmt" },
 				javascript = { "eslint_d" },
 				typescript = { "eslint_d" },
+				json = { "fixjson" },
+                rust = { "rustfmt", lsp_format = "fallback" },
+                java = { "google-java-format" },
+                python = { "ruff_format" }
 			},
 		})
 

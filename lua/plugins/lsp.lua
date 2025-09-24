@@ -11,7 +11,7 @@ return {
 		require("mason").setup()
 
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls", "jdtls", "gopls", "rust_analyzer", "jsonls" },
+			ensure_installed = { "lua_ls", "jdtls", "gopls", "rust_analyzer", "jsonls", "ruff", "stylua", "ts_ls" },
 			automatic_installation = true,
 		})
 
@@ -52,9 +52,6 @@ return {
 			vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
 			vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
 			vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-			vim.keymap.set("n", "<leader>f", function()
-				vim.lsp.buf.format({ async = true })
-			end, opts)
 		end
 
 		vim.lsp.config("*", {
