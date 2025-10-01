@@ -38,50 +38,50 @@ local on_attach = function(_, bufnr)
 end
 
 vim.lsp.config("*", {
-    capabilities = capabilities,
-    on_attach = on_attach,
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 vim.lsp.config("gopls", {
-    cmd = { "gopls"},
-    filetypes = { 'go' },
+	cmd = { "gopls" },
+	filetypes = { "go" },
 })
 
 vim.lsp.config("jdtls", {
-    cmd = { "jdtls"},
-    filetypes = { 'java' },
+	cmd = { "jdtls" },
+	filetypes = { "java" },
 })
 
 vim.lsp.config("rust_analyzer", {
-    cmd = { "rust-analyzer"},
-    filetypes = { 'rs' },
-})
-
-vim.lsp.config("jsonls", {
-    cmd = { "jsonls"},
-    filetypes = { 'json' },
+	cmd = { "rust-analyzer" },
+	filetypes = { "rs" },
 })
 
 vim.lsp.config("ruff", {
-    cmd = { "ruff"},
-    filetypes = { 'py' },
+	cmd = { "ruff" },
+	filetypes = { "py" },
 })
 
 vim.lsp.config("ts_ls", {
-    cmd = { "typescript-language-server"},
-    filetypes = { 'ts' },
+	cmd = { "typescript-language-server", "--stdio" },
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
 })
 
 vim.lsp.config("lua_ls", {
-    cmd = { "lua-language-server"},
-    filetypes = { 'lua' },
-    settings = {
-        Lua = {
-            diagnostics = { globals = { "vim" } },
-            workspace = {
-                library = vim.api.nvim_get_runtime_file("", true),
-                checkThirdParty = false,
-            },
-        },
-    },
+	cmd = { "lua-language-server" },
+	filetypes = { "lua" },
+	settings = {
+		Lua = {
+			diagnostics = { globals = { "vim" } },
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+				checkThirdParty = false,
+			},
+		},
+	},
 })
