@@ -6,12 +6,17 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "gofmt" },
-				javascript = { "eslint_d" },
-				typescript = { "eslint_d" },
+				csharp = { "csharpier" },
+				javascript = { "eslint_d", "prettierd" },
+				typescript = { "eslint_d", "prettierd" },
 				json = { "fixjson" },
-                rust = { "rustfmt", lsp_format = "fallback" },
-                java = { "google-java-format" },
-                python = { "ruff_format" }
+				rust = { "rustfmt" },
+				java = { "google-java-format" },
+				python = {
+					"ruff_fix",
+					"ruff_format",
+					"ruff_organize_imports",
+				},
 			},
 		})
 

@@ -37,39 +37,27 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
 end
 
-vim.lsp.config("*", {
+vim.lsp.config("gopls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-
-vim.lsp.config("gopls", {
-	cmd = { "gopls" },
-	filetypes = { "go" },
-})
-
 vim.lsp.config("jdtls", {
-	cmd = { "jdtls" },
-	filetypes = { "java" },
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
-
-vim.lsp.config("rust_analyzer", {
-	cmd = { "rust-analyzer" },
-	filetypes = { "rs" },
+vim.lsp.config("rust-analyzer", {
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
-
-vim.lsp.config("ruff", {
-	cmd = { "ruff" },
-	filetypes = { "py" },
+vim.lsp.config("omnisharp", {
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
-
+vim.lsp.config("pyright", {
+})
 vim.lsp.config("ts_ls", {
-	cmd = { "typescript-language-server", "--stdio" },
-	filetypes = {
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-	},
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 vim.lsp.config("lua_ls", {
@@ -84,4 +72,6 @@ vim.lsp.config("lua_ls", {
 			},
 		},
 	},
+	capabilities = capabilities,
+	on_attach = on_attach,
 })

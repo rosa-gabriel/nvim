@@ -7,13 +7,14 @@ return {
 		"L3MON4D3/LuaSnip",
 		"mfussenegger/nvim-jdtls",
 		"j-hui/fidget.nvim",
+        "neovim/nvim-lspconfig"
 	},
 	config = function()
 		require("fidget").setup({})
 		require("mason").setup()
 
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls", "jdtls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls" },
+			ensure_installed = { "lua_ls", "jdtls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright" },
 			automatic_installation = true,
 		})
 	end,
