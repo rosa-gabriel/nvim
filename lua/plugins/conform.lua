@@ -11,6 +11,7 @@ return {
 				typescript = { "eslint_d", "prettierd" },
 				json = { "fixjson" },
 				rust = { "rustfmt" },
+                xml = { "xmlformatter" },
 				java = { "google-java-format" },
 				python = {
 					"ruff_fix",
