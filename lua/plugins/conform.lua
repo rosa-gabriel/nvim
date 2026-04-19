@@ -3,13 +3,16 @@ return {
 	opts = {},
 	config = function()
 		require("conform").setup({
+            formatters = {
+                ["google-java-format"] = {
+                    prepend_args = { "--aosp" },
+                },
+            },
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "gofmt" },
-				csharp = { "csharpier" },
-				javascript = { "eslint_d", "prettierd" },
-				typescript = { "eslint_d", "prettierd" },
-				json = { "fixjson" },
+				javascript = { "eslint_d" },
+				typescript = { "eslint_d" },
 				rust = { "rustfmt" },
                 xml = { "xmlformatter" },
 				java = { "google-java-format" },
